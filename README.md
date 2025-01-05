@@ -34,6 +34,7 @@
 $ yarn install
 $  nest g module modules/user
 $  nest g controller user  
+$  nest g service user 
 ```
 
 ## Compile and run the project
