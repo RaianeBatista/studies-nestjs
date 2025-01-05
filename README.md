@@ -32,6 +32,8 @@
 
 ```bash
 $ yarn install
+$  nest g module modules/user
+$  nest g controller user  
 ```
 
 ## Compile and run the project
