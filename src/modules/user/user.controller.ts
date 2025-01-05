@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { Controller, Get, Param, Patch, Query } from '@nestjs/common';
+import { UserService } from './user.service';
 
 interface queryPayload {
   filter: string;
@@ -8,9 +9,10 @@ interface queryPayload {
 
 @Controller('user')
 export class UserController {
+  constructor(private userService: UserService){}
   @Get()
-  findAll(@Query() query: queryPayload): any {
-    return query;
+  findAll(): string {
+    return this.userService.findAll();
   }
 
 @Patch(':id')
